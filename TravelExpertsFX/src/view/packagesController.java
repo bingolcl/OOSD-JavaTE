@@ -97,7 +97,7 @@ public class packagesController {
     	btnPickPackage.setText(selectedPackage.getPkgName());
     	this.rootLayout = Main.rootLayout;
     	AnchorPane BookingDetail = (AnchorPane)FXMLLoader.load(getClass().getResource("BookingDetail.fxml"));
-		rootLayout.setCenter(BookingDetail);
+		rootLayout.setRight(BookingDetail);
 		//Main.rootController.onPage("lblDetail");
     }
 
@@ -115,7 +115,7 @@ public class packagesController {
     void btnBackOnclick(ActionEvent event) throws IOException {
     	this.rootLayout = Main.rootLayout;
     	AnchorPane accountPage = (AnchorPane)FXMLLoader.load(getClass().getResource("Account.fxml"));
-		rootLayout.setCenter(accountPage);
+		rootLayout.setRight(accountPage);
 		//Main.rootController.onPage("lblAccount");
     }
     

@@ -71,7 +71,7 @@ public class BookingDetailController {
     	
     	this.rootLayout = Main.rootLayout;
     	AnchorPane Summary = (AnchorPane)FXMLLoader.load(getClass().getResource("Summary.fxml"));
-		rootLayout.setCenter(Summary);
+		rootLayout.setRight(Summary);
 
     }
     

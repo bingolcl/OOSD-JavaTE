@@ -67,7 +67,7 @@
                   </Label>
                </children>
             </HBox>
-            <Label fx:id="progressBar" prefHeight="7.0" prefWidth="62.0" style="-fx-background-color: teal;">
+            <Label fx:id="progressBar" prefHeight="11.0" prefWidth="123.0" style="-fx-background-color: teal;">
                <font>
                   <Font size="4.0" />
                </font>

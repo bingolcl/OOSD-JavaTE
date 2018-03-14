@@ -12,16 +12,16 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AccountController">
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AccountController">
    <children>
-      <HBox layoutX="513.0" layoutY="509.0" spacing="20.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="513.0">
+      <HBox layoutX="358.0" layoutY="401.0" spacing="20.0" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="358.0">
          <children>
             <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#btnCancel_onClick" prefWidth="100.0" text="Cancel" />
             <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#btnEdit_onClick" prefWidth="100.0" text="Edit" />
             <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSave_onClick" prefWidth="100.0" text="Save" />
          </children>
       </HBox>
-      <GridPane layoutX="-17.0" layoutY="20.0" prefHeight="608.0" prefWidth="440.0" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="100.0">
+      <GridPane layoutX="-17.0" layoutY="20.0" prefHeight="608.0" prefWidth="440.0" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="100.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="165.0" />
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="180.0" />
@@ -50,7 +50,7 @@
             <Label prefWidth="80.0" text="Province: " GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <GridPane layoutX="627.0" layoutY="100.0" prefHeight="608.0" prefWidth="660.0" AnchorPane.bottomAnchor="280.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="100.0">
+      <GridPane layoutX="627.0" layoutY="100.0" prefHeight="608.0" prefWidth="660.0" AnchorPane.bottomAnchor="280.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="122.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="180.0" />
@@ -84,7 +84,7 @@
                </GridPane.margin></Text>
          </children>
       </GridPane>
-      <Button fx:id="btnNext" layoutX="524.0" layoutY="340.0" mnemonicParsing="false" onAction="#btnNext_onClick" prefWidth="50.0" text="&gt;" AnchorPane.bottomAnchor="220.0" AnchorPane.rightAnchor="280.0" />
-      <Button fx:id="btnPrevious" layoutX="40.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnPrevious_onClick" prefWidth="50.0" text="&lt;" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="280.0" />
+      <Button fx:id="btnNext" layoutX="843.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnNext_onClick" prefWidth="50.0" text="&gt;" AnchorPane.bottomAnchor="160.0" AnchorPane.rightAnchor="207.0" />
+      <Button fx:id="btnPrevious" layoutX="165.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnPrevious_onClick" prefWidth="50.0" text="&lt;" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="165.0" />
    </children>
 </AnchorPane>

@@ -132,7 +132,7 @@ public class AccountController {
     void btnPrevious_onClick(ActionEvent event) throws IOException {
     	this.rootLayout = Main.rootLayout;
     	AnchorPane accountPage = (AnchorPane)FXMLLoader.load(getClass().getResource("Main.fxml"));
-		rootLayout.setCenter(accountPage);
+		rootLayout.setRight(accountPage);
 
     }
 
@@ -141,7 +141,7 @@ public class AccountController {
     	//next Scene - Package   
     	this.rootLayout = Main.rootLayout;
     	AnchorPane packagePage = (AnchorPane)FXMLLoader.load(getClass().getResource("packages.fxml"));
-		rootLayout.setCenter(packagePage);
+		rootLayout.setRight(packagePage);
 
     }
 

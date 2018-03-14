@@ -62,7 +62,7 @@ public class MainController {
     	{
     		this.rootLayout = Main.rootLayout;
             AnchorPane accountPage = (AnchorPane)FXMLLoader.load(getClass().getResource("Account.fxml"));
-			rootLayout.setCenter(accountPage);			
+			rootLayout.setRight(accountPage);			
     	}
     }
     
@@ -74,8 +74,12 @@ public class MainController {
         assert txtName != null : "fx:id=\"txtName\" was not injected: check your FXML file 'Main.fxml'.";
         assert btnRegister != null : "fx:id=\"btnRegister\" was not injected: check your FXML file 'Main.fxml'.";
         assert btnNext != null : "fx:id=\"btnNext\" was not injected: check your FXML file 'Main.fxml'.";
-
-        Main.rootController.onPage("lblMain");
+        
+        if(Main.scene != null)
+        {
+        	Main.rootController.onPage("lblMain");
+        }
+        
         conn = DBHelper.getConnection();
         buildList();  
         btnNext.setDisable(true);
