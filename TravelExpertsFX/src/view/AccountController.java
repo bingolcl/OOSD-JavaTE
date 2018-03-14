@@ -14,9 +14,9 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
-import application.DBHelper;
 import application.Mail;
 import application.Main;
+import database.DBHelper;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;

@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 import com.jfoenix.controls.JFXButton;
 
-import application.AgentDB;
+import database.AgentDB;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;

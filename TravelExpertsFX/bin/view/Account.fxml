@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1100.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AccountController">
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AccountController">
    <children>
       <HBox layoutX="358.0" layoutY="401.0" spacing="20.0" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="358.0">
          <children>
@@ -87,4 +88,8 @@
       <Button fx:id="btnNext" layoutX="843.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnNext_onClick" prefWidth="50.0" text="&gt;" AnchorPane.bottomAnchor="160.0" AnchorPane.rightAnchor="207.0" />
       <Button fx:id="btnPrevious" layoutX="165.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnPrevious_onClick" prefWidth="50.0" text="&lt;" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="165.0" />
    </children>
+   <stylesheets>
+      <URL value="@../application/application.css" />
+      <URL value="@../application/buttonStyle.css" />
+   </stylesheets>
 </AnchorPane>

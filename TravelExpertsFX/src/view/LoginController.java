@@ -6,8 +6,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
-import application.DBHelper;
 import application.SceneManager;
+import database.DBHelper;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,7 +28,7 @@ public class LoginController {
 	boolean connected = false;
 	boolean loginPage = true;
 	Thread t;
-	Agent curAgent = new Agent(1,"Test","b","c","d","e","f",1);
+	Agent curAgent;
 
 	@FXML
     private Pane pnlLogo;

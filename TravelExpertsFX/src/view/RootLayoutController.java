@@ -10,6 +10,7 @@ import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
@@ -30,9 +31,6 @@ public class RootLayoutController {
 
     @FXML
     private Label Title;
-
-    @FXML
-    private ImageView btnClose;
     
     
     @FXML
@@ -66,15 +64,51 @@ public class RootLayoutController {
     private Label progressBar;
     
     @FXML
+    private Button btnOff;
+    
+    
+    
+    @FXML
     void closeApp(MouseEvent event) {
-    	Platform.exit();
+    	System.exit(0);
+    }
+    
+
+    @FXML
+    void mouseOver(MouseEvent event) {
+    	Object object = event.getSource();
+    	if(object instanceof Label) {
+    		Label lbl  = (Label)event.getSource();
+        	lbl.setStyle("-fx-background-color: darkgrey;");
+    	}
+    	if(object instanceof Button) {
+    		Button btn  = (Button)event.getSource();
+    		btn.setStyle("-fx-background-color: darkgrey;"
+    				+ "-fx-text-fill: black;"
+    				+ "-fx-font-weight: bold;");
+    	}
+    }
+
+    @FXML
+    void mouseLeave(MouseEvent event) {
+    	Object object = event.getSource();
+    	if(object instanceof Label) {
+    		Label lbl  = (Label)event.getSource();
+        	lbl.setStyle("-fx-background-color: black;");
+    	}
+    	if(object instanceof Button) {
+    		Button btn  = (Button)event.getSource();
+    		btn.setStyle("-fx-background-color: black;"
+    				+ "-fx-text-fill: white;"
+    				+ "-fx-font-weight: bold;");
+    	}
     }
 
     @FXML
     void initialize() {
         assert logoImage != null : "fx:id=\"logoImage\" was not injected: check your FXML file 'RootLayout.fxml'.";
         assert Title != null : "fx:id=\"Title\" was not injected: check your FXML file 'RootLayout.fxml'.";
-        assert btnClose != null : "fx:id=\"btnClose\" was not injected: check your FXML file 'RootLayout.fxml'.";    	
+        assert btnOff != null : "fx:id=\"btnOff\" was not injected: check your FXML file 'RootLayout.fxml'.";
     	assert progressBar != null : "fx:id=\"progressBar\" was not injected: check your FXML file 'RootLayout.fxml'.";
         assert lblMain != null : "fx:id=\"lblMain\" was not injected: check your FXML file 'RootLayout.fxml'.";
         assert lblRegister != null : "fx:id=\"lblRegister\" was not injected: check your FXML file 'RootLayout.fxml'.";
@@ -83,6 +117,8 @@ public class RootLayoutController {
         assert lblDetail != null : "fx:id=\"lblDetail\" was not injected: check your FXML file 'RootLayout.fxml'.";
         assert lblSummary != null : "fx:id=\"lblSummary\" was not injected: check your FXlML file 'RootLayout.fxml'.";
         assert lblConfirmation != null : "fx:id=\"lblConfirmation\" was not injected: check your FXML file 'RootLayout.fxml'.";
+        //btnOff.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("..\\close.png"))));
+        
         progressBar.setStyle(activeStyle());
         
         

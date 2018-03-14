@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: white;" stylesheets="@../application/buttonStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
    <children>
       <ListView fx:id="listView" layoutX="250.0" layoutY="121.0" prefHeight="224.0" prefWidth="500.0" AnchorPane.bottomAnchor="255.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="121.0" />
       <Text layoutX="250.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: " AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="87.0" />

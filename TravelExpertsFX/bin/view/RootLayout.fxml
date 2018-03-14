@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,19 +14,15 @@
    <top>
       <VBox prefHeight="84.0" prefWidth="1366.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
          <children>
-            <Pane prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: white;">
+            <Pane prefHeight="37.0" prefWidth="1366.0" style="-fx-background-color: white;">
                <children>
                   <ImageView fx:id="logoImage" fitHeight="30.0" fitWidth="33.0" layoutX="14.0" layoutY="-1.0">
                      <image>
                         <Image url="@../travel.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="Title" layoutX="53.0" prefHeight="28.0" prefWidth="85.0" style="-fx-font-weight: bold;" text="Easy Booking" />
-                  <ImageView fx:id="btnClose" fitHeight="18.0" fitWidth="16.0" layoutX="1336.0" layoutY="5.0" onMouseClicked="#closeApp">
-                     <image>
-                        <Image url="@../close.png" />
-                     </image>
-                  </ImageView>
+                  <Label fx:id="Title" layoutX="53.0" prefHeight="33.0" prefWidth="85.0" style="-fx-font-weight: bold;" text="Easy Booking" />
+                  <Button fx:id="btnOff" layoutX="1300.0" layoutY="4.0" maxHeight="25.0" maxWidth="60.0" mnemonicParsing="false" onMouseClicked="#closeApp" onMouseEntered="#mouseOver" onMouseExited="#mouseLeave" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold;" text="Exit" />
                </children>
             </Pane>
             <HBox prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: white;">

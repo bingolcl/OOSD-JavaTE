@@ -1,10 +1,7 @@
-package application;
+package database;
 
 import java.sql.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
-import application.DBHelper;
 import model.Agent;
 
 public class AgentDB {
@@ -13,10 +10,15 @@ public class AgentDB {
 		Agent ag = new Agent();
 		try {
 			Connection con = DBHelper.getConnection();
-			String query = "SELECT * FROM Agents WHERE AgentId = ?";
-		    PreparedStatement ps = con.prepareStatement(query);
-		    ps.setInt(1, id);
-		    ResultSet rs = ps.executeQuery(); 	        
+//			String query = "SELECT * FROM Agents WHERE AgentId = ?";
+//		    PreparedStatement ps = con.prepareStatement(query);
+//		    ps.setInt(1, id);
+//		    ResultSet rs = ps.executeQuery(); 
+		    
+	    	CallableStatement cStmt = con.prepareCall("{call getAgentById(?)}");
+	        cStmt.setInt(1, id);
+	    	ResultSet rs = cStmt.executeQuery();
+	    	
 	        while (rs.next()) {
 	        	ag.setAgentId(id);
 	        	ag.setAgtFirstName(rs.getString("agtFirstName"));
