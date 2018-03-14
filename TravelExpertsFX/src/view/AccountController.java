@@ -131,7 +131,7 @@ public class AccountController {
     @FXML
     void btnPrevious_onClick(ActionEvent event) throws IOException {
     	this.rootLayout = Main.rootLayout;
-    	AnchorPane accountPage = (AnchorPane)FXMLLoader.load(getClass().getResource("Main.fxml"));
+    	AnchorPane accountPage = (AnchorPane)FXMLLoader.load(getClass().getResource("RegisterView.fxml"));
 		rootLayout.setRight(accountPage);
 
     }

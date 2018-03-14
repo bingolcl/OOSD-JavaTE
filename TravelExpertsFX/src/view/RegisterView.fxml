@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="513.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="513.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterViewController">
    <children>
       <Label layoutX="116.0" layoutY="23.0" text="Register New Customer" textAlignment="CENTER">
          <font>
@@ -38,6 +38,7 @@
       <Label layoutX="86.0" layoutY="153.0" text="Adress" />
       <Label layoutX="86.0" layoutY="121.0" text="Last Name" />
       <Label layoutX="86.0" layoutY="88.0" text="First Name" />
-      <Button fx:id="btnRegister" layoutX="216.0" layoutY="423.0" mnemonicParsing="false" text="Register" />
+      <Button fx:id="btnRegister" layoutX="216.0" layoutY="423.0" mnemonicParsing="false" onAction="#btnRegister_onClick" text="Register" />
+      <Button fx:id="btnBack" layoutX="85.0" layoutY="423.0" mnemonicParsing="false" onAction="#btnBack_onClick" text="&lt;&lt;" />
    </children>
 </AnchorPane>
