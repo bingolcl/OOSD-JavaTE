@@ -61,9 +61,15 @@ public class MainController {
     	if(selectedCustomer != null)
     	{
     		this.rootLayout = Main.rootLayout;
-            AnchorPane accountPage = (AnchorPane)FXMLLoader.load(getClass().getResource("RegisterView.fxml"));
+            AnchorPane accountPage = (AnchorPane)FXMLLoader.load(getClass().getResource("Account.fxml"));
 			rootLayout.setRight(accountPage);			
     	}
+//    	else
+//    	{
+//    		this.rootLayout = Main.rootLayout;
+//            AnchorPane registerPage = (AnchorPane)FXMLLoader.load(getClass().getResource("RegisterView.fxml"));
+//			rootLayout.setRight(registerPage);
+//    	}
     }
     
    

@@ -10,8 +10,8 @@ public class DBHelper {
 
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated constructor stub
-		Class.forName("com.mysql.jdbc.Driver");
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/travelexperts_jh", "root", "");
+		Class.forName("org.mariadb.jdbc.Driver");
+		conn = DriverManager.getConnection("jdbc:mariadb://10.163.101.210:3306/travelexperts_jh","jhdb","password");
 		return conn;
 		
 	}
