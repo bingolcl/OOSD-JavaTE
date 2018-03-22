@@ -49,7 +49,7 @@ public class SceneManager {
           Main.rootController = (RootLayoutController) loader.getController();
           Main.rootLayout = rootPane;
           rootPane.setLeft(menuLoader.load());
-          rootPane.setRight(mainLoader.load());
+          rootPane.setCenter(mainLoader.load());
           // Show the scene containing the root layout.
           Stage stage2 = new Stage();
           stage2.setMaximized(true);

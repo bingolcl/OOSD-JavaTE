@@ -131,17 +131,19 @@ public class AccountController {
     @FXML
     void btnPrevious_onClick(ActionEvent event) throws IOException {
     	this.rootLayout = Main.rootLayout;
-    	AnchorPane accountPage = (AnchorPane)FXMLLoader.load(getClass().getResource("RegisterView.fxml"));
-		rootLayout.setRight(accountPage);
+    	AnchorPane mainPage = (AnchorPane)FXMLLoader.load(getClass().getResource("Main.fxml"));
+		rootLayout.setRight(mainPage);
 
     }
 
     @FXML
-    void btnNext_onClick(ActionEvent event) throws IOException {
+    void btnNext_onClick(ActionEvent event) throws Exception {
     	//next Scene - Package   
     	this.rootLayout = Main.rootLayout;
     	AnchorPane packagePage = (AnchorPane)FXMLLoader.load(getClass().getResource("packages.fxml"));
 		rootLayout.setRight(packagePage);
+		
+		//Mail.Main(null);
 
     }
 

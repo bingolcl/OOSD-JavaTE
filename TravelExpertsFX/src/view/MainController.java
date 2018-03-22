@@ -62,17 +62,16 @@ public class MainController {
     	{
     		this.rootLayout = Main.rootLayout;
             AnchorPane accountPage = (AnchorPane)FXMLLoader.load(getClass().getResource("Account.fxml"));
-			rootLayout.setRight(accountPage);			
+			rootLayout.setCenter(accountPage);			
     	}
-//    	else
-//    	{
-//    		this.rootLayout = Main.rootLayout;
-//            AnchorPane registerPage = (AnchorPane)FXMLLoader.load(getClass().getResource("RegisterView.fxml"));
-//			rootLayout.setRight(registerPage);
-//    	}
     }
     
-   
+    @FXML
+    void btnRegister_onClick(ActionEvent event) throws IOException {
+		this.rootLayout = Main.rootLayout;
+		AnchorPane registerPage = (AnchorPane)FXMLLoader.load(getClass().getResource("RegisterView.fxml"));
+		rootLayout.setCenter(registerPage);
+    }
     
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() throws ClassNotFoundException, SQLException {

@@ -11,7 +11,7 @@
       <ListView fx:id="listView" layoutX="250.0" layoutY="121.0" prefHeight="224.0" prefWidth="500.0" AnchorPane.bottomAnchor="255.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="121.0" />
       <Text layoutX="250.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: " AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="87.0" />
       <TextField fx:id="txtName" layoutX="288.0" layoutY="83.0" AnchorPane.topAnchor="83.0" />
-      <Button fx:id="btnRegister" layoutX="450.0" layoutY="355.0" mnemonicParsing="false" prefWidth="100.0" text="Register" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="450.0" />
+      <Button fx:id="btnRegister" layoutX="450.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnRegister_onClick" prefWidth="100.0" text="Register" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="450.0" />
       <Button fx:id="btnNext" layoutX="700.0" layoutY="355.0" mnemonicParsing="false" onAction="#OnNext" prefWidth="50.0" text="&gt;" AnchorPane.bottomAnchor="160.0" AnchorPane.rightAnchor="350.0" />
    </children>
 </AnchorPane>
