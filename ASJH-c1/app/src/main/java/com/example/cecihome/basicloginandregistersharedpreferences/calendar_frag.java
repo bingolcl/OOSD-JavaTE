@@ -27,7 +27,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 
-public class fragment1 extends Fragment {
+public class calendar_frag extends Fragment {
 
     private  static final String TAG = "CalendarFragment";
     private CalendarPickerView tsCalendar;

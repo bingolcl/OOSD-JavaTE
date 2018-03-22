@@ -260,11 +260,15 @@
         android:layout_alignParentBottom="true">
 
         <android.support.design.widget.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/bottomNavView_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:background="@drawable/white_grey_border_top"
+            app:itemBackground="@color/colorWhite"
             app:menu="@menu/bottom_navigation_menu">
+            <!--app:itemIconTint="@drawable/bottom_nav_colors"-->
+            <!--app:itemTextColor="@drawable/bottom_nav_colors"-->
 
         </android.support.design.widget.BottomNavigationView>
 
