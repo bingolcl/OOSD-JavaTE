@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.squareup.timessquare.CalendarPickerView
+        android:id="@+id/tsCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_centerHorizontal="true">
+    </com.squareup.timessquare.CalendarPickerView>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tsCalendar"/>
+
+
+    <ListView
+        android:id="@+id/lvPackage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvDate"/>
+
+</RelativeLayout>
