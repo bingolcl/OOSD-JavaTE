@@ -1,11 +1,16 @@
 package com.example.cecihome.basicloginandregistersharedpreferences;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -29,6 +34,7 @@ public class CalendarActivity extends AppCompatActivity{
     private  static final String TAG = "Calendar";
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
+    private BottomNavigationView bottomNavigationView;
 
 //    private CalendarPickerView tsCalendar;
 //    private TextView tvDate;
@@ -52,6 +58,31 @@ public class CalendarActivity extends AppCompatActivity{
         tabLayout.getTabAt(0).setIcon(R.drawable.travel_black_24dp);
         tabLayout.getTabAt(1).setIcon(R.drawable.sunny_black_24dp);
         tabLayout.getTabAt(2).setIcon(R.drawable.date_black_24dp);
+
+        bottomNavigationView = findViewById(R.id.bottomNavView_bar);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(2);
+        menuItem.setChecked(true);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.ic_home:
+                        Intent intent = new Intent(CalendarActivity.this, MenuCards.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.ic_money:
+                        break;
+                    case R.id.ic_date:
+                        break;
+                    case R.id.ic_sun:
+                        break;
+                    case R.id.ic_travel:
+                        break;
+                }
+                return false;
+            }
+        });
     }
 
     private  void setupViewPager(ViewPager viewPager){

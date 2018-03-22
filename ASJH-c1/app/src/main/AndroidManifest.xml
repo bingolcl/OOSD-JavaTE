@@ -18,8 +18,8 @@
         </activity>
         <activity android:name=".DisplayScreen" />
         <activity android:name=".Register" />
-        <activity android:name=".CalendarActivity"></activity>
-        <activity android:name=".MenuCards"></activity>
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".MenuCards" />
     </application>
 
 </manifest>

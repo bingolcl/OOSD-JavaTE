@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -55,90 +55,15 @@
             android:id="@+id/relLayoutBotBar"
             android:layout_alignParentBottom="true">
 
-            <android.support.design.widget.AppBarLayout
+            <android.support.design.widget.BottomNavigationView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="bottom">
+                android:id="@+id/bottomNavView_bar"
+                android:background="@drawable/white_grey_border_top"
+                app:menu="@menu/bottom_navigation_menu">
 
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbarBottom"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/white_grey_border_top">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingBottom="15dp"
-                        android:paddingTop="15dp"
-                        android:weightSum="100">
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="20"
-                            android:src="@drawable/home_black_24" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="20"
-                            android:src="@drawable/money_black_24dp" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="20"
-                            android:src="@drawable/date_black_24dp" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="20"
-                            android:src="@drawable/sunny_black_24dp" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="20"
-                            android:src="@drawable/travel_black_24dp" />
-
-
-                    </LinearLayout>
-                </android.support.v7.widget.Toolbar>
-            </android.support.design.widget.AppBarLayout>
+            </android.support.design.widget.BottomNavigationView>
 
         </RelativeLayout>
-
-
     </RelativeLayout>
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical"-->
-    <!--tools:layout_editor_absoluteY="410dp">-->
-        <!---->
-        <!--<com.squareup.timessquare.CalendarPickerView-->
-        <!--android:id="@+id/tsCalendar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="650dp">-->
-    <!--</com.squareup.timessquare.CalendarPickerView>-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/tvDate"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="20dp"-->
-            <!--android:textSize="30sp" />-->
-
-
-        <!--<ListView-->
-            <!--android:id="@+id/lvPackage"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="331dp"-->
-            <!--android:layout_marginTop="20dp" />        -->
-
-    <!--</LinearLayout>-->
 </android.support.design.widget.CoordinatorLayout>
