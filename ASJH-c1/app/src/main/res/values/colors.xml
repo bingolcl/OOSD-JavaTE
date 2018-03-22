@@ -13,4 +13,5 @@
     <color name="calendar_default_disabled_text">#9CA3A9</color>
     <color name="calendar_default_enabled_bakcground">#F5F7F9</color>
     <color name="calendar_default_enabled_text">#ff4081</color>
+    <color name="colorGreyBorder">#c3c3c3</color>
 </resources>

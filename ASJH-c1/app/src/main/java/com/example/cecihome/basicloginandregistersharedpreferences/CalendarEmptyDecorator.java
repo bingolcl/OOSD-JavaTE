@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.squareup.timessquare.CalendarCellDecorator;
 import com.squareup.timessquare.CalendarCellView;
+import com.squareup.timessquare.CalendarPickerView;
 
 import java.util.Date;
 
@@ -22,22 +23,26 @@ public class CalendarEmptyDecorator implements CalendarCellDecorator {
         this.max = max;
     }
 
-    @Override
-    public void decorate(CalendarCellView calendarCellView, Date date) {
+    //@Override
+    public void decorate(CalendarPickerView calendarView, Date date) {
         if(date.compareTo(min) != -1 && date.compareTo(max) != 1) {
-            calendarCellView.setBackgroundColor(this.context.getResources()
+            calendarView.setBackgroundColor(this.context.getResources()
                     .getColor(R.color.calendar_default_enabled_bakcground));
 
-            calendarCellView.getDayOfMonthTextView().setTextColor(this.context.getResources()
-                    .getColor(R.color.calendar_default_enabled_text));
+            //calendarView.getDayOfMonthTextView().setTextColor(this.context.getResources()
+            //        .getColor(R.color.calendar_default_enabled_text));
         }
         else {
-            calendarCellView.setBackgroundColor(this.context.getResources()
+            calendarView.setBackgroundColor(this.context.getResources()
                     .getColor(R.color.calendar_default_disabled_background));
 
-            calendarCellView.getDayOfMonthTextView().setTextColor(this.context.getResources()
-                    .getColor(R.color.calendar_default_disabled_text));
+//            calendarView.getDayOfMonthTextView().setTextColor(this.context.getResources()
+//                    .getColor(R.color.calendar_default_disabled_text));
         }
     }
 
+    @Override
+    public void decorate(CalendarCellView cellView, Date date) {
+
+    }
 }
