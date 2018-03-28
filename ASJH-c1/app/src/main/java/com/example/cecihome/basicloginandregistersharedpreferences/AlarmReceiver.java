@@ -37,9 +37,11 @@ public class AlarmReceiver extends BroadcastReceiver {
         Notification notification = builder.setContentTitle("Demo App Notification")
                 .setContentText("New Notification From Demo App...")
                 .setTicker("New Message Alert!")
-                .setAutoCancel(true)
+                .setAutoCancel(false)
                 .setSmallIcon(R.drawable.travel_black_24dp)
-                .setContentIntent(pendingIntent).build();
+                .setPriority(Notification.PRIORITY_HIGH)
+                .setDefaults(Notification.DEFAULT_ALL)
+                .setFullScreenIntent(pendingIntent, true).build();
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             builder.setChannelId(CHANNEL_ID);
