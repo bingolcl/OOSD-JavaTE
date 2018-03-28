@@ -4,6 +4,10 @@ package com.example.cecihome.basicloginandregistersharedpreferences;
  * Created by Ceci Home on 2018/3/21.
  */
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.app.Service;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.internal.BottomNavigationItemView;
@@ -25,6 +29,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+
+import static android.content.Context.ALARM_SERVICE;
 
 
 public class calendar_frag extends Fragment {
@@ -109,7 +115,6 @@ public class calendar_frag extends Fragment {
             }
         });
 
-
         ArrayList<Package> packages =  new ArrayList<>();
         packages.add(new Package(1,"Caribbean New Year","Cruise the Caribbean & Celebrate the New Year."));
         packages.add(new Package(2,"Polynesian Paradise","8 Day All Inclusive Hawaiian Vacation."));
@@ -119,6 +124,8 @@ public class calendar_frag extends Fragment {
         return view;
 
     }
+
+
     public static ArrayList<Date> getDaysBetweenDates(Date startDate, Date endDate)
     {
         ArrayList<Date> dates = new ArrayList<Date>();

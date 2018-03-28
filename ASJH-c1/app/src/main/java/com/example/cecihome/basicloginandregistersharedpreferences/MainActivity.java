@@ -1,6 +1,9 @@
 package com.example.cecihome.basicloginandregistersharedpreferences;
 
 import android.annotation.SuppressLint;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -12,6 +15,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -37,6 +42,18 @@ public class MainActivity extends AppCompatActivity{
         cvLogin = findViewById(R.id.cvRegister);
         tvRegister = findViewById(R.id.tvRegister);
         tvError = findViewById(R.id.tvError);
+
+        //setup notification
+        AlarmManager am = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
+
+        Intent notificationIntent = new Intent(this,AlarmReceiver.class);
+        PendingIntent broadcast = PendingIntent.getBroadcast(this, 100,notificationIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+
+        //Set a notification in certain time(5s)
+        Calendar now = Calendar.getInstance();
+        now.add(Calendar.SECOND,5);
+        am.setExact(AlarmManager.RTC_WAKEUP, now.getTimeInMillis(),broadcast);
+
 
         cvLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +82,6 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
         });
-
 
         cvLogin.setOnTouchListener(new View.OnTouchListener() {
             @Override
